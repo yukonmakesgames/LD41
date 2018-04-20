@@ -1,0 +1,13 @@
+{
+    "id": "be4a141c-8eb4-489c-9e73-e68846dd3af5",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "be4a141c-8eb4-489c-9e73-e68846dd3af5",
+    "children": [
+        "8992af49-964c-477c-8b3b-2c902d12779d"
+    ],
+    "filterType": "GMSprite",
+    "folderName": "sprites",
+    "isDefaultView": false,
+    "localisedFolderName": "ResourceTree_Sprites"
+}
