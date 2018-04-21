@@ -224,6 +224,14 @@
             }
         },
         {
+            "Key": "5684af29-047c-4f3c-9855-c4795007c3b0",
+            "Value": {
+                "id": "cc9541a5-7cd6-4ece-a153-b17a09a4963e",
+                "resourcePath": "objects\\o_enemy_slime\\o_enemy_slime.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6043055c-94c2-4b9a-8e00-a2829db1e297",
             "Value": {
                 "id": "9bbff4e0-f98e-4ac9-b96c-e083e924f0e9",
@@ -679,6 +687,14 @@
             "Value": {
                 "id": "269f6d34-3e2c-4154-9de9-06118b306c7c",
                 "resourcePath": "views\\efce9674-70d7-4058-b41f-fab9f8abc192.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f358d1f7-1f45-4ff6-8d3d-b4e576e206b1",
+            "Value": {
+                "id": "40f0c1f0-f5eb-4bd7-a695-fac733fe1501",
+                "resourcePath": "views\\f358d1f7-1f45-4ff6-8d3d-b4e576e206b1.yy",
                 "resourceType": "GMFolder"
             }
         },
