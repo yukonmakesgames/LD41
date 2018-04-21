@@ -36,17 +36,20 @@ if(collide_type == "none")
 
 #region //-------------------------------- Vertical.
 
-		for (i = 0; i < abs(spd_v); i++)
+		if(position_meeting(x, y + spd_v, o_eng_solid) && spd_v != 0)
 		{
-		    if (!instance_position(x, y + sign(spd_v), o_eng_solid))
+			if(!position_meeting(x, y, o_eng_solid))
 			{
-		        y += sign(spd_v);
-			} else
-			{		
-				spd_v = 0;
-		        break;
-		    }
+			    while(!position_meeting(x, y + sign(spd_v), o_eng_solid))
+			    {
+			        y += sign(spd_v);
+			    }
+			}
+	
+			spd_v = 0;
 		}
+
+		y += spd_v;
 		
 #endregion
 
@@ -54,17 +57,20 @@ if(collide_type == "none")
 
 #region //-------------------------------- Horizontal.
 
-		for (i = 0; i < abs(spd_h); i++)
+		if(position_meeting(x + spd_h, y, o_eng_solid) && spd_h != 0)
 		{
-			if (!instance_position(x + sign(spd_h), y, o_eng_solid))
+			if(!position_meeting(x, y, o_eng_solid))
 			{
-		        x += sign(spd_h); 
-		    } else
-			{
-				spd_h = 0;
-				break;
+			    while(!position_meeting(x + sign(spd_h), y, o_eng_solid))
+			    {
+			        x += sign(spd_h);
+			    }
 			}
+    
+			spd_h = 0;
 		}
+
+		x += spd_h;
 
 #endregion
 
@@ -76,21 +82,23 @@ if(collide_type == "none")
 
 	} else if(collide_type == "full")
 	{
-		var i;
 
 #region //-------------------------------- Vertical.
 
-		for (i = 0; i < abs(spd_v); i++)
+		if(place_meeting(x, y + spd_v, o_eng_solid) && spd_v != 0)
 		{
-		    if (!place_meeting(x, y + sign(spd_v), o_eng_solid))
+			if(!place_meeting(x, y, o_eng_solid))
 			{
-		        y += sign(spd_v);
-			} else
-			{
-		        spd_v = 0;
-		        break;
+			    while(!place_meeting(x, y + sign(spd_v), o_eng_solid))
+			    {
+			        y += sign(spd_v);
+			    }
 			}
-	    }
+	
+			spd_v = 0;
+		}
+
+		y += spd_v;
 
 #endregion
 
@@ -98,17 +106,20 @@ if(collide_type == "none")
 
 #region //-------------------------------- Horizontal.
 
-		for (i = 0; i < abs(spd_h); i++)
+		if(place_meeting(x + spd_h, y, o_eng_solid) && spd_h != 0)
 		{
-			if (!place_meeting(x + sign(spd_h), y, o_eng_solid))
+			if(!place_meeting(x, y, o_eng_solid))
 			{
-		        x += sign(spd_h); 
-		    } else
-			{
-				spd_h = 0;
-				break;
+			    while(!place_meeting(x + sign(spd_h), y, o_eng_solid))
+			    {
+			        x += sign(spd_h);
+			    }
 			}
+    
+			spd_h = 0;
 		}
+
+		x += spd_h;
 	}
 }
 
