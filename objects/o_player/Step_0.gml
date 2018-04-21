@@ -28,6 +28,20 @@ move = input_right + input_left + input_down + input_up;
 
 
 
+#region //-------------------------------- Locking.
+
+if(instance_exists(o_player_sword))
+{
+	move_control = false;
+} else
+{
+	move_control = true;	
+}
+
+#endregion
+
+
+
 #region //-------------------------------- Direction.
 
 move_dir = point_direction(0, 0, 0 + move_h, 0 + move_v);
@@ -56,7 +70,79 @@ if(move_control)
 
 
 
-#region //________________________________________________ Movement.
+#region //________________________________________________ Inventory.
+
+#region //-------------------------------- Pickup/Put down.
+
+if(held_item == noone)
+{
+	var item_touched = instance_place(x, y, o_eng_item);
+	
+	if(item_touched != noone)
+	{
+		if(keyboard_check_pressed(global.keybind_keyboard_action_interact))
+		{
+			held_item = item_touched;	
+		}
+	}
+} else
+{
+	if(keyboard_check_pressed(global.keybind_keyboard_action_interact))
+	{
+		held_item = noone;
+	}
+}
+
+#endregion
+
+
+
+#region //-------------------------------- Use.
+
+if(held_item != noone)
+{
+	if(!instance_exists(o_player_sword))
+	{
+		if(keyboard_check_pressed(global.keybind_keyboard_action_use))
+		{		
+			if(sprite_index == s_player_move)
+			{
+				if(abs(spd_v) > abs(spd_h))
+				{
+					if(sign(spd_v) == 1)
+					{
+						attack_dir = 270;
+					} else
+					{
+						attack_dir = 90;
+					}
+				} else
+				{
+					if(sign(spd_h) == 1)
+					{
+						attack_dir = 0;
+					} else
+					{
+						attack_dir = 180;
+					}
+				}
+			}
+		
+			var attack = instance_create_depth(x + lengthdir_x(attack_distance, attack_dir), y + attack_offset_y + lengthdir_y(attack_distance, attack_dir), depth, o_player_sword);
+			attack.image_angle = attack_dir;
+			attack.spd_h = lengthdir_x(attack.spd_max, attack_dir);
+			attack.spd_v = lengthdir_y(attack.spd_max, attack_dir);
+		}
+	}
+}
+
+#endregion
+
+#endregion
+
+
+
+#region //________________________________________________ Animation.
 
 if(!global.player_status_hp_dead)
 {

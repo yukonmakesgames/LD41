@@ -13,6 +13,16 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "7c35bd55-0820-4e99-81f4-6c19faef4eff"
+        },
+        {
+            "id": "14e667a8-3174-4d52-85cc-f32d798854b5",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "7c35bd55-0820-4e99-81f4-6c19faef4eff"
         }
     ],
     "maskSpriteId": "7f605657-484f-4ade-b60b-6f0929f9b57e",
@@ -125,6 +135,62 @@
             "resourceFilter": 1023,
             "value": "0",
             "varName": "move_v",
+            "varType": 0
+        },
+        {
+            "id": "edec5e8d-17b4-4af6-8081-9f7ea9c90d8d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "noone",
+            "varName": "held_item",
+            "varType": 5
+        },
+        {
+            "id": "97bd545e-6493-46de-9efa-a620b4197a90",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "attack_dir",
+            "varType": 0
+        },
+        {
+            "id": "c1f88f27-e93c-4c9f-83cb-82281c309da6",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "16",
+            "varName": "attack_distance",
+            "varType": 0
+        },
+        {
+            "id": "d47304dd-324e-47a2-a2d7-8be6d91651fc",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "-8",
+            "varName": "attack_offset_y",
             "varType": 0
         }
     ],

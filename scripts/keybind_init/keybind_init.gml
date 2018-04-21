@@ -6,10 +6,10 @@
 
 #region //-------------------------------- Movement. [movement]
 
-global.keybind_keyboard_movement_left = ord("A");
-global.keybind_keyboard_movement_right = ord("D");
-global.keybind_keyboard_movement_up = ord("W");
-global.keybind_keyboard_movement_down = ord("S");
+global.keybind_keyboard_movement_left = vk_left;
+global.keybind_keyboard_movement_right = vk_right;
+global.keybind_keyboard_movement_up = vk_up;
+global.keybind_keyboard_movement_down = vk_down;
 
 #endregion
 
@@ -17,7 +17,8 @@ global.keybind_keyboard_movement_down = ord("S");
 
 #region //-------------------------------- Action. [action]
 
-global.keybind_keyboard_action_interact = ord("E");
+global.keybind_keyboard_action_use = ord("Z");
+global.keybind_keyboard_action_interact = ord("X");
 
 #endregion
 

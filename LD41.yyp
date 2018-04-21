@@ -184,11 +184,27 @@
             }
         },
         {
+            "Key": "4cd627f6-d9a3-4a2c-8129-3786dfff1ad2",
+            "Value": {
+                "id": "eaa2b049-563d-4720-8abc-65f12aab938c",
+                "resourcePath": "objects\\o_eng_item\\o_eng_item.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4d8eb259-b1a4-40d8-bf83-c5dbb6c0d018",
             "Value": {
                 "id": "faf98161-4ed3-469e-adae-327aac23f6d1",
                 "resourcePath": "rooms\\r_dev_blank\\r_dev_blank.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "51327b66-ea99-4f09-8d94-5392265de572",
+            "Value": {
+                "id": "bcf850a4-fcf5-476e-beca-ba3731196086",
+                "resourcePath": "sprites\\s_player_sword\\s_player_sword.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -221,6 +237,14 @@
                 "id": "9605df42-e658-459a-9ee1-d522f140b471",
                 "resourcePath": "scripts\\game_init\\game_init.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "67b6b20a-9f7b-4d19-835c-40a915df6180",
+            "Value": {
+                "id": "4930151c-cd0a-4fc0-985b-5adb1e4e6346",
+                "resourcePath": "sprites\\s_item_sword\\s_item_sword.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -348,6 +372,22 @@
             "Value": {
                 "id": "e477d9b0-74f2-4327-ad3f-d898d0ca2ef8",
                 "resourcePath": "views\\9813c867-6b7a-4edc-bcb6-93d5641c860f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "99c9a678-c786-4616-b038-108c7d39cc52",
+            "Value": {
+                "id": "ea71179c-40c0-4008-92aa-5f2cd7edc5f2",
+                "resourcePath": "objects\\o_player_sword\\o_player_sword.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9bc8eb7e-c23a-485d-bed2-a1073abd44a3",
+            "Value": {
+                "id": "cb97b07d-8146-46f3-866a-9a64e6fbc4e1",
+                "resourcePath": "views\\9bc8eb7e-c23a-485d-bed2-a1073abd44a3.yy",
                 "resourceType": "GMFolder"
             }
         },
