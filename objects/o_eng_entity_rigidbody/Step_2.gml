@@ -95,6 +95,12 @@ if(collide_type == "none")
 			    }
 			}
 	
+			if(abs(spd_v) > .5)
+			{
+				scale_x = 1.33;
+				scale_y = 0.66;
+			}
+	
 			spd_v = 0;
 		}
 
@@ -116,6 +122,12 @@ if(collide_type == "none")
 			    }
 			}
     
+			if(abs(spd_h) > .5)
+			{
+				scale_x = 0.66;
+				scale_y = 1.33;	
+			}
+	
 			spd_h = 0;
 		}
 

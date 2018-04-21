@@ -53,3 +53,31 @@ if(move_control)
 #endregion
 
 #endregion
+
+
+
+#region //________________________________________________ Movement.
+
+if(!global.player_status_hp_dead)
+{
+	if(abs(spd_h) < 0.1 && abs(spd_v) < 0.1 )
+	{
+		sprite_index = s_player_idle;	
+	} else
+	{
+		sprite_index = s_player_move;
+		
+		if(spd_h < 0)
+		{
+			image_xscale = -1;	
+		} else if(spd_h > 0)
+		{
+			image_xscale = 1;
+		}
+	}
+} else
+{
+	sprite_index = s_player_dead;	
+}
+
+#endregion
