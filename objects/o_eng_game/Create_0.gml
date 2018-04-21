@@ -46,9 +46,27 @@ keybind_init();
 
 #endregion
 
+
+
 #region //-------------------------------- Player. [player]
 
 player_init();
+
+#endregion
+
+
+
+#region //-------------------------------- Plants. [plants]
+
+plants_init();
+
+#endregion
+
+
+
+#region //-------------------------------- Items. [items]
+
+items_init();
 
 #endregion
 

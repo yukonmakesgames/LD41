@@ -33,7 +33,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "440cfa2c-9850-4a4f-918a-900360af9c40",
+            "id": "7c900bfd-d8f6-47f0-bc17-9db768dc88a8",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -42,12 +42,12 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "sword",
+            "value": "0",
             "varName": "item",
-            "varType": 2
+            "varType": 0
         }
     ],
     "solid": false,
-    "spriteId": "67b6b20a-9f7b-4d19-835c-40a915df6180",
+    "spriteId": "adb7acc1-e10e-452f-a566-09b05b9cec74",
     "visible": true
 }

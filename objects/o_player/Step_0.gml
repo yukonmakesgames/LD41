@@ -89,7 +89,42 @@ if(held_item == noone)
 {
 	if(keyboard_check_pressed(global.keybind_keyboard_action_interact))
 	{
+		if(global.items[held_item.item, 1])
+		{
+			held_item.image_angle = choose(0, 90, 180, 270);
+		}
+		
 		held_item = noone;
+		
+	}
+}
+
+#endregion
+
+
+
+#region //-------------------------------- Aim.
+
+if(sprite_index == s_player_move)
+{
+	if(abs(spd_v) > abs(spd_h))
+	{
+		if(sign(spd_v) == 1)
+		{
+			attack_dir = 270;
+		} else
+		{
+			attack_dir = 90;
+		}
+	} else
+	{
+		if(sign(spd_h) == 1)
+		{
+			attack_dir = 0;
+		} else
+		{
+			attack_dir = 180;
+		}
 	}
 }
 
@@ -99,39 +134,27 @@ if(held_item == noone)
 
 #region //-------------------------------- Use.
 
-if(held_item != noone)
+if(held_item != noone && instance_exists(held_item))
 {
 	if(!instance_exists(o_player_sword))
 	{
 		if(keyboard_check_pressed(global.keybind_keyboard_action_use))
 		{		
-			if(sprite_index == s_player_move)
+			if(held_item.item == 0)
 			{
-				if(abs(spd_v) > abs(spd_h))
+				var attack = instance_create_depth(x + lengthdir_x(attack_distance, attack_dir), y + attack_offset_y + lengthdir_y(attack_distance, attack_dir), depth, o_player_sword);
+				attack.image_angle = attack_dir;
+				attack.spd_h = lengthdir_x(attack.spd_max, attack_dir);
+				attack.spd_v = lengthdir_y(attack.spd_max, attack_dir);
+			} else
+			{
+				if(global.items[held_item.item, 2])
 				{
-					if(sign(spd_v) == 1)
-					{
-						attack_dir = 270;
-					} else
-					{
-						attack_dir = 90;
-					}
-				} else
-				{
-					if(sign(spd_h) == 1)
-					{
-						attack_dir = 0;
-					} else
-					{
-						attack_dir = 180;
-					}
+					plants_create(x, y, global.items[held_item.item, 3]);
+					instance_destroy(held_item);
+					held_item = noone;
 				}
 			}
-		
-			var attack = instance_create_depth(x + lengthdir_x(attack_distance, attack_dir), y + attack_offset_y + lengthdir_y(attack_distance, attack_dir), depth, o_player_sword);
-			attack.image_angle = attack_dir;
-			attack.spd_h = lengthdir_x(attack.spd_max, attack_dir);
-			attack.spd_v = lengthdir_y(attack.spd_max, attack_dir);
 		}
 	}
 }

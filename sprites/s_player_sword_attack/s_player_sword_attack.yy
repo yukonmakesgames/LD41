@@ -2,7 +2,7 @@
     "id": "67b6b20a-9f7b-4d19-835c-40a915df6180",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_item_sword",
+    "name": "s_player_sword_attack",
     "For3D": false,
     "HTile": false,
     "VTile": false,

@@ -16,6 +16,7 @@ if(instance_exists(o_player))
 	} else
 	{
 		visible = true;
+		image_index = item;
 	}
 }
 
