@@ -38,6 +38,12 @@ keybind_init();
 
 #endregion
 
+#region //-------------------------------- Player. [player]
+
+player_init();
+
+#endregion
+
 #endregion
 
 
@@ -45,5 +51,7 @@ keybind_init();
 #region //________________________________________________ Next.
 
 room_goto_next();
+
+global.game_state = "game";
 
 #endregion
