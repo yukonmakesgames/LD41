@@ -30,6 +30,14 @@ resolution_init();
 
 #endregion
 
+
+
+#region //-------------------------------- Keybind. [keybind]
+
+keybind_init();
+
+#endregion
+
 #endregion
 
 
