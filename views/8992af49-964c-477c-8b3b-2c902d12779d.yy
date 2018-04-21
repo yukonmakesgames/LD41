@@ -6,7 +6,8 @@
     "children": [
         "eaec41b0-6afb-4c70-a0c2-5e5e48f13fa8",
         "94b313ed-52b4-48bc-b493-a88fd736557b",
-        "d87590be-41cc-4e18-bf38-f1e60756cdd7"
+        "d87590be-41cc-4e18-bf38-f1e60756cdd7",
+        "e234a01f-48c9-44c5-97fe-9ce0e9bd2708"
     ],
     "filterType": "GMSprite",
     "folderName": "Engine",
