@@ -20,6 +20,6 @@ if(held_item != noone)
 {
 	if(held_item.item != 0)
 	{
-		draw_sprite_ext(s_items, held_item.item, x, y - 16, image_xscale, 1, 0, c_white, 1);
+		draw_sprite_ext(s_items, held_item.item, x, y - 16, 1, 1, 0, c_white, 1);
 	}
 }

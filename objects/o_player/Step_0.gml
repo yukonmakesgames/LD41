@@ -171,6 +171,14 @@ if(held_item != noone && instance_exists(held_item))
 				attack.image_angle = attack_dir;
 				attack.spd_h = lengthdir_x(attack.spd_max, attack_dir);
 				attack.spd_v = lengthdir_y(attack.spd_max, attack_dir);
+			} else if(held_item.item == 2)
+			{
+				var attack = instance_create_depth(x + lengthdir_x(attack_distance, attack_dir), y + attack_offset_y + lengthdir_y(attack_distance, attack_dir), depth, o_player_bomb);
+				attack.spd_h = lengthdir_x(attack.spd_max, attack_dir);
+				attack.spd_v = lengthdir_y(attack.spd_max, attack_dir);
+				
+				instance_destroy(held_item);
+				held_item = noone;
 			} else
 			{
 				if(global.items[held_item.item, 2])

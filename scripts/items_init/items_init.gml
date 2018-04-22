@@ -13,3 +13,15 @@ global.items[current_item, 1] = false; // Can rotate?
 global.items[current_item, 2] = true; // Seed?
 global.items[current_item, 3] = 0; // Plant ID
 current_item++;
+
+global.items[current_item, 0] = "Bomb"; // Name
+global.items[current_item, 1] = false; // Can rotate?
+global.items[current_item, 2] = false; // Seed?
+global.items[current_item, 3] = 0; // Plant ID
+current_item++;
+
+global.items[current_item, 0] = "Bomb Seed"; // Name
+global.items[current_item, 1] = false; // Can rotate?
+global.items[current_item, 2] = true; // Seed?
+global.items[current_item, 3] = 1; // Plant ID
+current_item++;
