@@ -11,6 +11,14 @@ if(!global.player_status_hp_stunned && !global.player_status_hp_dead && !other.h
 	scale_x = 0.66;
 	scale_y = 1.33;
 
+	if(global.player_status_hp > 0)
+	{
+		shake_screen(8, 0.9);
+	} else
+	{
+		shake_screen(16, 0.9);	
+	}
+
 	other.spd_h = 0;
 	other.spd_v = 0;
 

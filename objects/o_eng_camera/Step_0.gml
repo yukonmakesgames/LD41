@@ -11,4 +11,6 @@ if(instance_exists(o_player))
 x = lerp(x, target_x, 0.125);
 y = lerp(y, target_y, 0.125);
 
-camera_set_view_pos(view_camera[0], x, y)
+camera_set_view_pos(view_camera[0], x + random_range(-shake, shake), y + random_range(-shake, shake))
+
+shake *= shake_decay;

@@ -811,6 +811,14 @@
             }
         },
         {
+            "Key": "ef4e586b-7f20-4aad-822d-dd13a9e83a1f",
+            "Value": {
+                "id": "4d54f3bc-7ac0-4ac6-8f00-d630574f8025",
+                "resourcePath": "scripts\\shake_screen\\shake_screen.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "efce9674-70d7-4058-b41f-fab9f8abc192",
             "Value": {
                 "id": "269f6d34-3e2c-4154-9de9-06118b306c7c",
@@ -854,6 +862,7 @@
     "script_order": [
         "db84400a-262e-4f3c-8291-51bea6a2a742",
         "6ef03e87-45c5-440d-b32e-537d95620878",
+        "ef4e586b-7f20-4aad-822d-dd13a9e83a1f",
         "678ac4cb-856c-4005-b64c-eaf29ea408f2",
         "b7ee231b-1f51-4c91-841e-24bce87b0a10",
         "97072137-30ab-449d-9ff2-cc460cecedac",

@@ -107,7 +107,8 @@ if(held_item == noone)
 	{
 		if(keyboard_check_pressed(global.keybind_keyboard_action_interact))
 		{
-			held_item = item_touched;	
+			held_item = item_touched;
+			shake_screen(1, 0.9);
 		}
 	}
 } else
@@ -121,6 +122,7 @@ if(held_item == noone)
 		
 		held_item = noone;
 		
+		shake_screen(1, 0.9);
 	}
 }
 
@@ -165,6 +167,8 @@ if(held_item != noone && instance_exists(held_item))
 	{
 		if(keyboard_check_pressed(global.keybind_keyboard_action_use))
 		{		
+			shake_screen(2, 0.9);
+			
 			if(held_item.item == 0)
 			{
 				var attack = instance_create_depth(x + lengthdir_x(attack_distance, attack_dir), y + attack_offset_y + lengthdir_y(attack_distance, attack_dir), depth, o_player_sword);
