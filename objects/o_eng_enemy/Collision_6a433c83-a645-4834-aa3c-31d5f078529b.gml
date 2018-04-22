@@ -3,3 +3,5 @@
 
 
 hp -= 1;
+
+rigidbody_apply_force(other.image_angle, 4);

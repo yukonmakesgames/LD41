@@ -30,12 +30,26 @@ move = input_right + input_left + input_down + input_up;
 
 #region //-------------------------------- Locking.
 
-if(instance_exists(o_player_sword))
+if(instance_exists(o_player_sword) || global.player_status_hp_stunned)
 {
 	move_control = false;
 } else
 {
 	move_control = true;	
+}
+
+#endregion
+
+
+
+#region //-------------------------------- Locking.
+
+if(global.player_status_hp_stunned)
+{
+	if(abs(spd_h) < 0.1 && abs(spd_v) < 0.1)
+	{
+		global.player_status_hp_stunned = false;
+	}
 }
 
 #endregion
@@ -167,26 +181,40 @@ if(held_item != noone && instance_exists(held_item))
 
 #region //________________________________________________ Animation.
 
-if(!global.player_status_hp_dead)
+if(!global.player_status_hp_stunned)
 {
-	if(abs(spd_h) < 0.1 && abs(spd_v) < 0.1 )
+	if(!global.player_status_hp_dead)
 	{
-		sprite_index = s_player_idle;	
+		if(abs(spd_h) < 0.1 && abs(spd_v) < 0.1 )
+		{
+			sprite_index = s_player_idle;	
+		} else
+		{
+			sprite_index = s_player_move;
+		
+			if(spd_h < 0)
+			{
+				image_xscale = -1;	
+			} else if(spd_h > 0)
+			{
+				image_xscale = 1;
+			}
+		}
 	} else
 	{
-		sprite_index = s_player_move;
-		
-		if(spd_h < 0)
-		{
-			image_xscale = -1;	
-		} else if(spd_h > 0)
-		{
-			image_xscale = 1;
-		}
+		sprite_index = s_player_dead;	
 	}
 } else
 {
-	sprite_index = s_player_dead;	
+	sprite_index = s_player_hurt;
+	
+	if(spd_h < 0)
+	{
+		image_xscale = 1;	
+	} else if(spd_h > 0)
+	{
+		image_xscale = -1;
+	}
 }
 
 #endregion

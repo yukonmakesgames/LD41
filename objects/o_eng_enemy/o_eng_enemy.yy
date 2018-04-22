@@ -23,6 +23,16 @@
             "enumb": 0,
             "eventtype": 4,
             "m_owner": "2e7f5453-c663-4f81-8f3c-2458d071cb38"
+        },
+        {
+            "id": "5d190ef6-facf-4c02-84b1-11b7978d1df1",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "2e7f5453-c663-4f81-8f3c-2458d071cb38"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -83,6 +93,62 @@
             "value": "0",
             "varName": "hp_dead",
             "varType": 3
+        },
+        {
+            "id": "e6ae1ba2-09aa-4751-a934-380affa2cf6d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 2,
+            "value": "0",
+            "varName": "anim_norm",
+            "varType": 5
+        },
+        {
+            "id": "f3e2ed82-cc37-4ed2-8065-1c684290690c",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 2,
+            "value": "0",
+            "varName": "anim_dead",
+            "varType": 5
+        },
+        {
+            "id": "161714d0-5fa8-4f5e-993b-5e343881a9c8",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "4",
+            "varName": "attack_knockback",
+            "varType": 0
+        },
+        {
+            "id": "6c5a676f-5ebb-47eb-953a-8f617c3b0445",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "attack_damage",
+            "varType": 0
         }
     ],
     "solid": false,

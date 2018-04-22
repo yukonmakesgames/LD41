@@ -5,26 +5,45 @@
 event_inherited();
 
 
-if(instance_exists(o_player))
+if(!hp_dead)
 {
-	if(collision_line(x, y, o_player.x, o_player.y, o_eng_solid, false, true) == noone)
+	if(instance_exists(o_player))
 	{
-		target_x = o_player.x;
-		target_y = o_player.y;
+		if(collision_line(x, y, o_player.x, o_player.y, o_eng_solid, false, true) == noone)
+		{
+			target_x = o_player.x;
+			target_y = o_player.y;
 		
-		aggro = true;
+			if(target_x < x)
+			{
+				image_xscale = -1;	
+			} else
+			{
+				image_xscale = 1;	
+			}
+		
+			aggro = true;
+		}
 	}
-}
 
-if(aggro)
-{
-	var target_dir = point_direction(x, y, target_x, target_y);
-		
-	spd_h += lengthdir_x(spd, target_dir);
-	spd_v += lengthdir_y(spd, target_dir);
-	
-	if(distance_to_point(target_x, target_y) < 4)
+	if(aggro)
 	{
-		aggro = false;	
+		var target_dir = point_direction(x, y, target_x, target_y);
+		
+		spd_h += lengthdir_x(spd, target_dir);
+		spd_v += lengthdir_y(spd, target_dir);
+	
+		image_speed = 2;
+	
+		if(distance_to_point(target_x, target_y) < 4)
+		{
+			aggro = false;	
+		}
+	} else
+	{
+		image_speed = 1;	
 	}
+} else
+{
+	aggro = false;	
 }

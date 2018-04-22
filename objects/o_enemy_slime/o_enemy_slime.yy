@@ -15,7 +15,7 @@
             "m_owner": "5684af29-047c-4f3c-9855-c4795007c3b0"
         }
     ],
-    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "maskSpriteId": "c5159ef3-9aac-4393-a527-2d31ff2b9f60",
     "overriddenProperties": [
         {
             "id": "6cb3d0a1-91a9-456b-904b-ac79b69800a5",
@@ -40,6 +40,30 @@
             "objectId": "b1b22592-d68f-4ca6-a6ec-49e6b4adb8f2",
             "propertyId": "6c93db49-b972-4968-8286-33d5fd7122ba",
             "value": "full"
+        },
+        {
+            "id": "ebc522bd-cf56-4353-9fb1-90bebf42c3f5",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "2e7f5453-c663-4f81-8f3c-2458d071cb38",
+            "propertyId": "e6ae1ba2-09aa-4751-a934-380affa2cf6d",
+            "value": "s_enemy_slime"
+        },
+        {
+            "id": "456a9427-3955-40ef-9b92-47a8b56ed958",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "2e7f5453-c663-4f81-8f3c-2458d071cb38",
+            "propertyId": "f3e2ed82-cc37-4ed2-8065-1c684290690c",
+            "value": "s_enemy_slime_dead"
+        },
+        {
+            "id": "59f14870-af17-4a5f-86bd-e152356d24f6",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "2e7f5453-c663-4f81-8f3c-2458d071cb38",
+            "propertyId": "161714d0-5fa8-4f5e-993b-5e343881a9c8",
+            "value": "6"
         }
     ],
     "parentObjectId": "2e7f5453-c663-4f81-8f3c-2458d071cb38",
@@ -101,6 +125,6 @@
         }
     ],
     "solid": false,
-    "spriteId": "356c42a5-8a61-471d-ba5d-eb6a889d82bf",
+    "spriteId": "4a5bd6ac-3fe3-4898-b50b-c8a831f302d5",
     "visible": true
 }
