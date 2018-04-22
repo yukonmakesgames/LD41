@@ -4,6 +4,17 @@
 
 event_inherited();
 
+#region //________________________________________________ Movement.
+
+if(global.player_status_hp <= 0)
+{
+	global.player_status_hp_dead = true;
+}
+
+#endregion
+
+
+
 #region //________________________________________________ Input. [input]
 
 var input_left = keyboard_check(global.keybind_keyboard_movement_left);
@@ -30,7 +41,7 @@ move = input_right + input_left + input_down + input_up;
 
 #region //-------------------------------- Locking.
 
-if(instance_exists(o_player_sword) || global.player_status_hp_stunned)
+if(instance_exists(o_player_sword) || global.player_status_hp_stunned || global.player_status_hp_dead)
 {
 	move_control = false;
 } else
@@ -202,7 +213,8 @@ if(!global.player_status_hp_stunned)
 		}
 	} else
 	{
-		sprite_index = s_player_dead;	
+		sprite_index = s_player_dead;
+		image_blend = c_gray;
 	}
 } else
 {

@@ -28,14 +28,20 @@ if(!hp_dead)
 
 	if(aggro)
 	{
-		var target_dir = point_direction(x, y, target_x, target_y);
+		if(!global.player_status_hp_dead)
+		{
+			var target_dir = point_direction(x, y, target_x, target_y);
 		
-		spd_h += lengthdir_x(spd, target_dir);
-		spd_v += lengthdir_y(spd, target_dir);
+			spd_h += lengthdir_x(spd, target_dir);
+			spd_v += lengthdir_y(spd, target_dir);
 	
-		image_speed = 2;
+			image_speed = 2;
 	
-		if(distance_to_point(target_x, target_y) < 4)
+			if(distance_to_point(target_x, target_y) < 4)
+			{
+				aggro = false;	
+			}
+		} else
 		{
 			aggro = false;	
 		}

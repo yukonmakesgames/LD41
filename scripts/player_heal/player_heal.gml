@@ -14,11 +14,4 @@ global.player_status_hp_dead = false;
 
 #endregion
 
-
-
-#region //-------------------------------- Energy. [eng]
-
-global.player_status_eng = global.player_status_eng_max;
-#endregion
-
 #endregion

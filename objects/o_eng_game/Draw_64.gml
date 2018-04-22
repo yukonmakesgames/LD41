@@ -13,10 +13,4 @@ if(global.game_state == "game")
 		
 		draw_sprite(s_ui_hp, full, 4 + ((sprite_get_width(s_ui_hp) * 1.5) * i), 4);
 	}
-	
-	var eng_x = 4;
-	var eng_y = 8 + sprite_get_height(s_ui_hp);
-	
-	draw_sprite(s_ui_eng, 0, eng_x, eng_y);
-	draw_sprite_ext(s_ui_eng, 1, eng_x, eng_y, global.player_status_eng/global.player_status_eng_max, 1, 0, c_white, 1);
 }

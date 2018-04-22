@@ -2,7 +2,7 @@
 
 
 
-if(global.player_status_hp_stunned == false)
+if(!global.player_status_hp_stunned && !global.player_status_hp_dead && !other.hp_dead)
 {
 	global.player_status_hp_stunned = true;
 	
