@@ -1,2 +1,3 @@
 # LD41
-My attempt at Ludum Dare 41! I will be surprised if I finish on time...
+
+The original jam version of Turnip Boy Commits Tax Evasion! Made in GameMaker for Ludum Dare 41.
